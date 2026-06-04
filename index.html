@@ -5,62 +5,272 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGOUDJIL KATIA</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* ── Stats row ── */
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 2rem auto 0;
+            max-width: 680px;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        .stat-card {
+            background: rgba(65, 105, 225, 0.1);
+            border: 1px solid rgba(65, 105, 225, 0.25);
+            border-radius: 10px;
+            padding: 14px 22px;
+            text-align: center;
+            min-width: 120px;
+            flex: 1;
+        }
+        .stat-number {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #4169E1;
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .stat-label {
+            font-size: 0.7rem;
+            color: #aaaaaa;
+            margin-top: 4px;
+            display: block;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* ── Certifications section ── */
+        .certs-section {
+            margin: 2.5rem auto 0;
+            max-width: 760px;
+            padding: 0 20px;
+        }
+        .certs-section h2 {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: #888;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: normal;
+        }
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 10px;
+        }
+        .cert-card {
+            background: #2a2a2a;
+            border: 1px solid #383838;
+            border-radius: 10px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .cert-card:hover {
+            border-color: #4169E1;
+            background: #2e2e3a;
+        }
+        .cert-issuer-badge {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 3px 9px;
+            border-radius: 20px;
+            display: inline-block;
+            width: fit-content;
+            font-family: 'Roboto Mono', monospace;
+        }
+        .badge-microsoft { background: rgba(0, 120, 212, 0.2); color: #5aabff; }
+        .badge-aws       { background: rgba(255, 153, 0, 0.2);  color: #ffb84d; }
+        .badge-google    { background: rgba(66, 133, 244, 0.18); color: #7aabff; }
+        .badge-oracle    { background: rgba(200, 16, 46, 0.2);  color: #ff7a85; }
+        .badge-alteryx   { background: rgba(0, 176, 116, 0.2);  color: #4de0b0; }
+
+        .cert-name {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.45;
+            color: #e0e0e0;
+            font-family: 'Roboto Mono', monospace;
+        }
+        .cert-date {
+            font-size: 11px;
+            color: #666;
+            margin-top: auto;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* ── Credly link ── */
+        .credly-cta {
+            text-align: center;
+            margin-top: 1.25rem;
+        }
+        .credly-cta a {
+            font-size: 12px;
+            color: #666;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+            padding-bottom: 1px;
+            font-family: 'Roboto Mono', monospace;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .credly-cta a:hover {
+            color: #4169E1;
+            border-color: #4169E1;
+        }
+
+        /* ── Override social-links margin since no photo ── */
+        .social-links {
+            margin-top: 2.5rem !important;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 480px) {
+            .stats-row { gap: 8px; }
+            .stat-card { padding: 12px 14px; min-width: 100px; }
+            .stat-number { font-size: 1.3rem; }
+            .certs-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar-left">
-            <span> Algiers, ALGERIA   </span>
+            <span>Algiers, ALGERIA &nbsp;</span>
             <img src="images/dz.png" alt="Algerian Flag" class="flag">
         </div>
         <div class="navbar-right">
             <a href="index.html">Home</a>
-              <a href="journey.html">My Journey Visualized</a>
-             <a href="education.html">My Education</a>
+            <a href="journey.html">My Journey Visualized</a>
+            <a href="education.html">My Education</a>
             <a href="skills.html">My Skills</a>
             <a href="project.html">My Projects</a>
-             <a href="learn.html">Learn With Me</a>
+            <a href="learn.html">Learn With Me</a>
         </div>
     </nav>
-<div class="wrapper">
-<h1 class="effect-wrapper">Data is <span id="typed"></span><span class="cursor">&nbsp;</span></h1>
-</div>
-    <!-- Introduction Section --> <div class="introduction-container">
-        <div class="introduction"> <p>I'm <span class="extra-bold"> Katia</span>,a Business Intelligence Engineer with 2 years of experience. What do I like? Diving deep into the world of technology and data. The more I explore, the more I realize we're just tiny creatures in a big, fascinating world.<br> <span class="extra-bold">Crazy, right?</span></p> 
-        </div> </div>
-        <!-- Profile Picture -->
-    <div class="profile-picture-container">
-        <img src="https://raw.githubusercontent.com/agkatia/agkatia.github.io/refs/heads/main/images/me.jpg" alt="Katia" class="profile-picture">
-    
+
+    <!-- Typed headline — untouched -->
+    <div class="wrapper">
+        <h1 class="effect-wrapper">Data is <span id="typed"></span><span class="cursor">&nbsp;</span></h1>
     </div>
 
-   <div class="social-links">  
-          
-        <a href="https://www.linkedin.com/in/katia00/" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon.svg" alt="LinkedIn" title="LinkedIn"class="social-icon"></a>
-     
-      <a href="https://github.com/agkatia" target="_blank"><img src="https://raw.githubusercontent.com/agkatia/agkatia.github.io/refs/heads/main/images/git.png" alt="GitHub" title="GitHub" class="social-icon"></a>
-     
-      <a href="https://medium.com/@byteknight00" target="_blank"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/medium-round-icon.png" alt="Medium"  title="Medium" class="social-icon"></a> 
-     
+    <!-- Updated intro — no photo -->
+    <div class="introduction-container">
+        <div class="introduction">
+            <p>I'm <span class="extra-bold">Katia</span>, a BI &amp; Data Engineering Specialist with <span class="extra-bold">4+ years</span> of experience. I build pipelines, dashboards, and data platforms that actually get used — currently at <span class="extra-bold">Sanofi</span>, delivering commercial analytics across Africa, Europe &amp; Latin America.<br><br>
+            <span class="extra-bold">Still convinced data is the most fascinating thing humans have ever built.</span></p>
+        </div>
+    </div>
 
-         <a href="mailto:ag.katia00@gmail.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" title="Gmail" class="social-icon"></a>
-     
- 
-     
-     </div>
-  
-  <script src="script.js"></script> 
+    <!-- Stats row -->
+    <div class="stats-row">
+        <div class="stat-card">
+            <span class="stat-number">4+</span>
+            <span class="stat-label">Years experience</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Managers trained</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Continents covered</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">9</span>
+            <span class="stat-label">Certifications</span>
+        </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="certs-section">
+        <h2>Certifications</h2>
+        <div class="certs-grid">
+
+            <a class="cert-card" href="https://www.credly.com/users/katia-a.9a76472d/badges" target="_blank">
+                <span class="cert-issuer-badge badge-microsoft">Microsoft</span>
+                <span class="cert-name">Innovation Challenge Hackathon</span>
+                <span class="cert-date">Apr 2026</span>
+            </a>
+
+            <a class="cert-card" href="https://www.credly.com/users/katia-a.9a76472d/badges" target="_blank">
+                <span class="cert-issuer-badge badge-aws">AWS</span>
+                <span class="cert-name">ML Foundations Training</span>
+                <span class="cert-date">Jun 2025</span>
+            </a>
+
+            <a class="cert-card" href="https://www.credly.com/users/katia-a.9a76472d/badges" target="_blank">
+                <span class="cert-issuer-badge badge-aws">AWS</span>
+                <span class="cert-name">Intro to Generative AI</span>
+                <span class="cert-date">Jun 2025</span>
+            </a>
+
+            <a class="cert-card" href="https://www.credly.com/users/katia-a.9a76472d/badges" target="_blank">
+                <span class="cert-issuer-badge badge-oracle">Oracle</span>
+                <span class="cert-name">OCI 2025 Foundations Associate</span>
+                <span class="cert-date">Aug 2025</span>
+            </a>
+
+            <a class="cert-card" href="https://www.credly.com/users/katia-a.9a76472d/badges" target="_blank">
+                <span class="cert-issuer-badge badge-alteryx">Alteryx</span>
+                <span class="cert-name">Designer Core Certification</span>
+                <span class="cert-date">Exp. May 2027</span>
+            </a>
+
+            <a class="cert-card" href="https://www.credly.com/users/katia-a.9a76472d/badges" target="_blank">
+                <span class="cert-issuer-badge badge-google">Google Cloud</span>
+                <span class="cert-name">Data Warehouse with BigQuery</span>
+                <span class="cert-date">Oct 2024</span>
+            </a>
+
+            <a class="cert-card" href="https://www.credly.com/users/katia-a.9a76472d/badges" target="_blank">
+                <span class="cert-issuer-badge badge-google">Google Cloud</span>
+                <span class="cert-name">Streaming Analytics into BigQuery</span>
+                <span class="cert-date">Oct 2024</span>
+            </a>
+
+            <a class="cert-card" href="https://www.credly.com/users/katia-a.9a76472d/badges" target="_blank">
+                <span class="cert-issuer-badge badge-google">Google Cloud</span>
+                <span class="cert-name">Derive Insights from BigQuery</span>
+                <span class="cert-date">Oct 2024</span>
+            </a>
+
+            <a class="cert-card" href="https://www.credly.com/users/katia-a.9a76472d/badges" target="_blank">
+                <span class="cert-issuer-badge badge-google">Google Cloud</span>
+                <span class="cert-name">BigQuery ML Predictive Modeling</span>
+                <span class="cert-date">Sep 2024</span>
+            </a>
+
+        </div>
+        <div class="credly-cta">
+            <a href="https://www.credly.com/users/katia-a.9a76472d/badges" target="_blank">View all badges on Credly ↗</a>
+        </div>
+    </div>
+
+    <!-- Social links — untouched -->
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/katia00/" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon.svg" alt="LinkedIn" title="LinkedIn" class="social-icon"></a>
+        <a href="https://github.com/agkatia" target="_blank"><img src="https://raw.githubusercontent.com/agkatia/agkatia.github.io/refs/heads/main/images/git.png" alt="GitHub" title="GitHub" class="social-icon"></a>
+        <a href="https://medium.com/@byteknight00" target="_blank"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/medium-round-icon.png" alt="Medium" title="Medium" class="social-icon"></a>
+        <a href="mailto:ag.katia00@gmail.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" title="Gmail" class="social-icon"></a>
+    </div>
+
+    <script src="script.js"></script>
     <script>
-    // Get all the nav links
-    const navLinks = document.querySelectorAll('.navbar-right a');
-
-    // Loop through each link
-    navLinks.forEach(link => {
-        // Check if the link href matches the current URL
-        if (link.href === window.location.href) {
-            link.classList.add('active');
-        }
-    });
-</script>
-
+        const navLinks = document.querySelectorAll('.navbar-right a');
+        navLinks.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>
