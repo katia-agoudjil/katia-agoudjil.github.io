@@ -62,7 +62,16 @@ html, body {
     background-color: #ddd;
     color: black;
 }
+.navbar-right a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
 
+.navbar-left span {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
 .profile-picture-container {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
