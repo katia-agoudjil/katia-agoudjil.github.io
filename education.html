@@ -3,104 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGOUDJIL KATIA - My Education </title>
-    <link rel="stylesheet" href="css/styles_e.css">
+    <title>AGOUDJIL KATIA - Education</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* ── Education Page ── */
+        .edu-container {
+            max-width: 800px;
+            margin: 120px auto 60px;
+            padding: 0 24px;
+        }
+
+        .edu-block {
+            margin-bottom: 60px;
+        }
+
+        .edu-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: #888;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .edu-degree {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            color: #FAFAFA;
+            margin-bottom: 4px;
+        }
+
+        .edu-meta {
+            font-size: 0.75rem;
+            color: #888;
+            font-family: 'Roboto Mono', monospace;
+            margin-bottom: 0;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #2e2e2e;
+            margin: 50px 0;
+        }
+
+        /* ── Graduation Project ── */
+        .project-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: #4169E1;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .project-desc {
+            font-size: 13px;
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+
+        .tech-tag {
+            font-size: 11px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: rgba(65, 105, 225, 0.15);
+            color: #7aabff;
+            border: 1px solid rgba(65, 105, 225, 0.25);
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .screenshots-grid a img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #2e2e2e;
+            transition: border-color 0.2s;
+        }
+
+        .screenshots-grid a img:hover {
+            border-color: #4169E1;
+        }
+
+        .dissertation-btn {
+            display: inline-block;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 10px 24px;
+            border-radius: 8px;
+            background: #4169E1;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .dissertation-btn:hover {
+            background: #2a4fc7;
+        }
+
+        @media (max-width: 480px) {
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+            .edu-degree {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <nav class="navbar">
         <div class="navbar-left">
-            <span>Algiers, ALGERIA</span>
+            <span>Algiers, ALGERIA &nbsp;</span>
             <img src="images/dz.png" alt="Algerian Flag" class="flag">
         </div>
         <div class="navbar-right">
             <a href="index.html">Home</a>
-            <a href="journey.html">My Journey Visualized</a>
-            <a href="education.html">My Education</a>
-            <a href="skills.html">My Skills</a>
-            <a href="project.html">My Projects</a>
-            <a href="learn.html">Learn With Me</a>
+            <a href="education.html">Education</a>
+            <a href="skills.html">Skills</a>
+            <a href="project.html">Projects</a>
+            <a href="learn.html">Writing</a>
         </div>
     </nav>
-    <div class="container">
-        <section class="education-section">
-            <h2><strong>My University</strong></h2>
-            <div class="university">
-                <h3>University of Science and Technology Houari Boumediene (USTHB)</h3>
-                <p>Located in Algiers, Algeria, recognized as one of the country's leading institutions for higher education in science and technology.</p>
-               
-           <a href="https://finfo.usthb.dz"> <img src="images/usthb.png" alt="USTHB Logo" class="university-logo"> </a>
-                  <hr> <!-- Divider added here -->
-                
+
+    <div class="edu-container">
+
+        <!-- Education -->
+        <div class="edu-block">
+            <p class="edu-label">Education</p>
+
+            <p class="edu-degree">Master in Big Data Analytics</p>
+            <p class="edu-meta">USTHB · Algiers, Algeria · 2020 – 2022</p>
+
+            <br>
+
+            <p class="edu-degree">Bachelor's in Information Systems & Software Engineering</p>
+            <p class="edu-meta">USTHB · Algiers, Algeria · 2017 – 2020</p>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Graduation Project -->
+        <div class="edu-block">
+            <p class="edu-label">Graduation Project</p>
+
+            <p class="project-title">Design and Implementation of an Integrated Digital Platform Based on SQL Server 2019 Big Data Cluster</p>
+
+            <p class="project-desc">A 7-month internship at CASNOS — the National Fund for Self-Employed. Designed and implemented a scalable Big Data platform to support CASNOS's digital transformation, enabling real-time dashboards, SMS notifications, and modernized data infrastructure.</p>
+
+            <div class="tech-tags">
+                <span class="tech-tag">SQL Server 2019</span>
+                <span class="tech-tag">Big Data Cluster</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">Lambda Architecture</span>
+                <span class="tech-tag">DevOps</span>
+                <span class="tech-tag">Power BI</span>
             </div>
 
-            <div class="education-details flex-container">
-                <div class="text-content">
-                    <h3>Master in Big Data Analytics (2020 - 2022)</h3>
-                    <ul>
-                        <li>Defining data-driven strategies.</li>
-                        <li>Mastering data optimization, visualization, interpretation.</li>
-                        <li>Machine learning techniques.</li>
-                        <li>Big Data platforms (e.g., Hadoop, Spark, Hive).</li>
-                        <li>Unstructured data management.</li>
-                        <li>Business Intelligence tools.</li>
-                        <li>Geographic information modeling.</li>
-                    </ul>
-                </div>
-                <img src="images/usthb2.png" alt="Education Building" class="education-image">
+            <div class="screenshots-grid">
+                <a href="https://github.com/agkatia/My-graduation-Project-USTHB/tree/main" target="_blank">
+                    <img src="images/dashboard.jpg" alt="Dashboard Screenshot">
+                </a>
+                <a href="https://github.com/agkatia/My-graduation-Project-USTHB/tree/main" target="_blank">
+                    <img src="images/cmd.jpg" alt="Command Line Screenshot">
+                </a>
+                <a href="https://github.com/agkatia/My-graduation-Project-USTHB/tree/main" target="_blank">
+                    <img src="images/result.jpg" alt="Result Screenshot">
+                </a>
             </div>
 
-            <div class="education-details flex-container">
-                <div class="text-content">
-                    <h3>Bachelor's Degree in Information Systems and Software Engineering (2017 - 2020)</h3>
-                    <ul>
-                        <li>Knowledge of organizations and their three systems (management, information (IS), and operation).</li>
-                        <li>Master the entire development cycle of an IS from needs analysis to the implementation of the operational IS based on modern design methodologies.</li>
-                        <li>Acquire the skills required for software development and testing.</li>
-                    </ul>
-                </div>
-                <img src="images/usthb3.png" alt="Education Building" class="education-image">
-            </div>
-        </section>
+            <a class="dissertation-btn" href="https://github.com/agkatia/My-graduation-Project-USTHB/blob/main/Final%20Dissertation%20Big%20Data%20Cluster.pdf" target="_blank">
+                Read the Dissertation ↗
+            </a>
+        </div>
 
-        <section class="graduation-project">
-            <h2>My Graduation Project</h2>
-            <div class="project">
-                <h4>Design and Implementation of an Integrated Digital Platform Based on SQL Server 2019 Big Data Cluster</h4>
-                <p>A 7-month internship at the National Fund for Self-Employed. The project focuses on designing and implementing an integrated digital platform to support CASNOS’s digital transformation strategy. It is designed to enhance service quality and decision-making through a scalable, robust Big Data solution.</p>
-             
-           <a href="https://damancom.casnos.dz">      <img src="images/casnos.jpg" alt="CASNOS Logo" class="project-logo"> </a>
-            
-                <h3>Objectives:</h3>
-                <ul>
-                    <li>Propose a Big Data architecture using Lambda/Kappa paradigms, leveraging technologies such as Docker and Kubernetes along with Microsoft SQL Server 2019.</li>
-                    <li>Align the Big Data ecosystem with specific use cases, such as real-time dashboards and SMS notifications, to enhance operational efficiency and user experience.</li>
-                    <li>Introduce DevOps practices within the CASNOS IT team to streamline development and deployment processes, ensuring continuous integration and delivery.</li>
-                </ul>
-                <div class="project-images">
-                    <a href="https://github.com/agkatia/My-graduation-Project-USTHB/tree/main">   <img src="images/dashboard.jpg" alt="Dashboard Screenshot" class="project-screenshot"></a>
-                    <a href="https://github.com/agkatia/My-graduation-Project-USTHB/tree/main">   <img src="images/cmd.jpg" alt="Command Line Screenshot" class="project-screenshot"></a>
-                    <a href="https://github.com/agkatia/My-graduation-Project-USTHB/tree/main">   <img src="images/result.jpg" alt="Result Screenshot" class="project-screenshot"></a>
-
-                </div>
-                <div class="final-dissertation">
-                    <h3>Final Dissertation</h3>
-                    <p>You can view my final dissertation <a href="https://github.com/agkatia/My-graduation-Project-USTHB/blob/main/Final%20Dissertation%20Big%20Data%20Cluster.pdf" target="_blank"><span class="highlight">HERE</span></a>. It contains all the details about the project, including the objectives, methodologies, technologies used, and results.</p>
-                </div>
-            </div>
-        </section>
     </div>
-    <script>
-    // Get all the nav links
-    const navLinks = document.querySelectorAll('.navbar-right a');
 
-    // Loop through each link
-    navLinks.forEach(link => {
-        // Check if the link href matches the current URL
-        if (link.href === window.location.href) {
-            link.classList.add('active');
-        }
-    });
-</script>
+    <script>
+        const navLinks = document.querySelectorAll('.navbar-right a');
+        navLinks.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
 
 </body>
 </html>
