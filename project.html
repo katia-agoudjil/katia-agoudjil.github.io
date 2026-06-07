@@ -3,94 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGOUDJIL KATIA - My Projects</title>
-    <link rel="stylesheet" href="css/styles_p.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <title>AGOUDJIL KATIA - Projects</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .projects-container {
+            max-width: 900px;
+            margin: 120px auto 80px;
+            padding: 0 32px;
+        }
+        .sec-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: #aaa;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        .proj-card {
+            background: #2a2a2a;
+            border: 1px solid #383838;
+            border-radius: 12px;
+            padding: 22px 26px;
+            margin-bottom: 16px;
+            transition: border-color 0.2s;
+        }
+        .proj-card:hover {
+            border-color: #4169E1;
+        }
+        .proj-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+        .proj-title {
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            color: #f0f0f0;
+            line-height: 1.4;
+            margin: 0;
+        }
+        .proj-date {
+            font-size: 12px;
+            color: #888;
+            font-family: 'Roboto Mono', monospace;
+            white-space: nowrap;
+            padding-top: 3px;
+        }
+        .proj-org {
+            font-size: 13px;
+            color: #888;
+            font-family: 'Roboto Mono', monospace;
+            margin: 4px 0 14px;
+        }
+        .kpi-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+            padding: 5px 14px;
+            border-radius: 20px;
+            background: rgba(65, 105, 225, 0.12);
+            color: #7aabff;
+            border: 1px solid rgba(65, 105, 225, 0.3);
+            margin-bottom: 14px;
+        }
+        .proj-desc {
+            font-size: 14px;
+            color: #bbb;
+            line-height: 1.8;
+            font-family: 'Roboto Mono', monospace;
+            margin-bottom: 16px;
+        }
+        .proj-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .tag {
+            font-size: 12px;
+            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 0.5px solid;
+        }
+        .tag-blue   { background: rgba(21,101,192,0.15); color: #5aabff; border-color: rgba(21,101,192,0.3); }
+        .tag-purple { background: rgba(103,58,183,0.15); color: #b39ddb; border-color: rgba(103,58,183,0.3); }
+        .tag-amber  { background: rgba(230,81,0,0.15);   color: #ffb74d; border-color: rgba(230,81,0,0.3); }
+        .tag-teal   { background: rgba(0,137,123,0.15);  color: #4db6ac; border-color: rgba(0,137,123,0.3); }
+        .proj-link {
+            font-size: 13px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            color: #888;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+            padding-bottom: 1px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .proj-link:hover {
+            color: #4169E1;
+            border-color: #4169E1;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid #2e2e2e;
+            margin: 2.5rem 0;
+        }
+        @media (max-width: 600px) {
+            .proj-header { flex-direction: column; gap: 4px; }
+            .proj-date { padding-top: 0; }
+        }
+    </style>
 </head>
 <body>
+
     <nav class="navbar">
         <div class="navbar-left">
-            <span>Algiers, ALGERIA</span>
+            <span>Algiers, ALGERIA &nbsp;</span>
             <img src="images/dz.png" alt="Algerian Flag" class="flag">
         </div>
         <div class="navbar-right">
             <a href="index.html">Home</a>
-            <a href="journey.html">My Journey Visualized</a>
-            <a href="education.html">My Education</a>
-            <a href="skills.html">My Skills</a>
-            <a href="project.html">My Projects</a>
-            <a href="learn.html">Learn With Me</a>
+            <a href="education.html">Education</a>
+            <a href="skills.html">Skills</a>
+            <a href="project.html">Projects</a>
+            <a href="learn.html">Writing</a>
         </div>
     </nav>
-    <div class="container">
-        <section class="education-section">
-            <h2>My Professional Projects</h2>
-            <div class="university">
-                <hr> <!-- Divider added here -->
-            </div>
 
-            <div class="education-details flex-container">
-                <div class="text-content">
-                    <h3>DSIS CNAS : Provision Of Services Component (08/2022-Present)</h3>
-                    <h5>General Directorate of National Social Security Fund</h5>
-                    <p>This module involves constructing a decision support system to monitor the evolution of expenditures and costs, with <u><strong>211</strong></u> indicators collected to analyze the functional domain of service.</p>
-                  <br>
-                    Tasks:
-                    <ul>
-                        <li>Develop and design OLAP cube using SSAS to support business analytics and improve decision-making.</li>
-                        <li>Create interactive reports using Power BI to provide insights into key performance indicators (KPIs). Setup Power BI Report Server, SSRS, and Oracle Providers to meet the project requirements.</li>
-                        <li>Create project backlogs, and user stories with Azure DevOps for sprint planning and execution.</li>
-                        <li>Develop technical support documents for bug resolution and task-specific procedures <strong><u>(Up to 20 Validated documents)</u></strong></li>
-                    </ul>
-                </div>
-                <img src="images/chifa.png" alt="Education Building" class="education-image">
-            </div>
+    <div class="projects-container">
 
-            <div class="education-details flex-container">
-                <div class="text-content">
-                    <h3>DSIS CNAS : Revenue And Recovery Component (12/2022 - 08/2023)</h3>
-                    <h5>General Directorate of National Social Security Fund</h5>
-                    <p>This module involves building a decision support system to track the evolution of contributions and assess financial balance using more than <strong><u>190</u></strong> indicators collected to enhance decision-making.</p>
-                    <br>
-                    Tasks:
-                    <ul>
-                        <li>Develop ETL processes using ORACLE for data extraction, transformation, and loading. Design and implement data cleansing, validation, and transformation logic to ensure data quality.</li>
-                        <li>Create and schedule SSIS packages to automate data integration tasks and ensure timely data updates.</li>
-                        <li>Configure monitoring and data security mechanisms utilizing Zabbix tool and automatic OLAP backup procedures.</li>
-                        <li>Handle backups for vital CNAS databases using DORADO HUAWEI and DELL technologies.</li>
-                    </ul>
-                </div>
-                <img src="images/insurence.jpg" alt="Education Building" class="education-image">
-            </div>
-        </section>
-        <section class="graduation-project">
-            <h2>My Side Projects</h2>
-            <hr>
-            <div class="project">
-                <p>In addition to my professional work, I enjoy taking on side projects that allow me to explore new skills, technologies, and creative solutions. These projects showcase my passion for continuous learning and innovation. If you find any of these initiatives interesting and would like to contribute, I’d be thrilled to collaborate and work together. Dive in to see some of the exciting and diverse initiatives I’ve been working on lately.</p>
-     <section class="slider">
-  <article id="article-container"></article>
-  <div>
-    <button class="leftArrow" onclick="previousImg()">❮</button>
-    <button class="rightArrow" onclick="nextImg()">❯</button>
-  </div>
-</section>
-<!-- Info-link -->
-<aside> Visit <a href="https://github.com/agkatia/PowerBi-Portfolio" target="_blank" rel="noopener noreferrer">My GitHub </a> For More Details
-</aside>   
-                   <script>
-    // Get all the nav links
-    const navLinks = document.querySelectorAll('.navbar-right a');
+        <!-- AWS Nano Degree -->
+        <span class="sec-label">AWS BI Engineer Nano Degree</span>
 
-    // Loop through each link
-    navLinks.forEach(link => {
-        // Check if the link href matches the current URL
-        if (link.href === window.location.href) {
-            link.classList.add('active');
-        }
-    });
-</script>
-                  <script src="script_p.js"></script> 
+        <div class="proj-card">
+            <div class="proj-header">
+                <p class="proj-title">Providing Data Insights to a Community College</p>
+                <span class="proj-date">Oct 2025</span>
+            </div>
+            <p class="proj-org">AWS BI Engineer Nano Degree Program</p>
+            <div class="kpi-badge">Amazon QuickSight · Amazon Q</div>
+            <p class="proj-desc">Analyzed student enrollment data, academic records, and course evaluations to uncover what drives professor effectiveness and student satisfaction. Built interactive dashboards and natural language queries to guide board-level recommendations on improving education quality without raising costs.</p>
+            <div class="proj-tags">
+                <span class="tag tag-amber">Amazon QuickSight</span>
+                <span class="tag tag-amber">Amazon Q</span>
+                <span class="tag tag-amber">Amazon S3</span>
+                <span class="tag tag-blue">Data Storytelling</span>
+            </div>
+            <a class="proj-link" href="https://github.com/katia-agoudjil/AWS_BI_Engineer_NanoDegree_Notes" target="_blank">View on GitHub ↗</a>
+        </div>
+
+        <div class="proj-card">
+            <div class="proj-header">
+                <p class="proj-title">AI-Powered Career Coach Assistant Application</p>
+                <span class="proj-date">Nov 2025</span>
+            </div>
+            <p class="proj-org">AWS BI Engineer Nano Degree Program</p>
+            <div class="kpi-badge">Amazon Q Apps · No-code</div>
+            <p class="proj-desc">Built a web-based application using Amazon Q Apps to automate skill-gap analysis — matching student CVs against job descriptions and recommending relevant training from a digital catalog. Coaches can fine-tune recommendations using natural language, ensuring consistent and up-to-date guidance.</p>
+            <div class="proj-tags">
+                <span class="tag tag-amber">Amazon Q Apps</span>
+                <span class="tag tag-amber">Amazon S3</span>
+                <span class="tag tag-blue">No-code</span>
+                <span class="tag tag-blue">NLP</span>
+            </div>
+            <a class="proj-link" href="https://github.com/katia-agoudjil/AWS_BI_Engineer_NanoDegree_Notes" target="_blank">View on GitHub ↗</a>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Professional Projects -->
+        <span class="sec-label">Professional Projects</span>
+
+        <div class="proj-card">
+            <div class="proj-header">
+                <p class="proj-title">DSIS CNAS — Provision of Services Component</p>
+                <span class="proj-date">Aug 2023 – Mar 2026</span>
+            </div>
+            <p class="proj-org">General Directorate of National Social Security Fund</p>
+            <div class="kpi-badge">211 KPIs · 20+ dashboards · 300+ users</div>
+            <p class="proj-desc">Built a decision support system to monitor expenditure and cost evolution across all CNAS agencies. Architected the full BI stack from ETL pipelines to OLAP cube to Power BI visualizations, serving 300+ users nationwide.</p>
+            <div class="proj-tags">
+                <span class="tag tag-purple">Power BI</span>
+                <span class="tag tag-purple">SSAS</span>
+                <span class="tag tag-blue">SSRS</span>
+                <span class="tag tag-blue">Azure DevOps</span>
+                <span class="tag tag-teal">Oracle</span>
+            </div>
+        </div>
+
+        <div class="proj-card">
+            <div class="proj-header">
+                <p class="proj-title">DSIS CNAS — Revenue & Recovery Component</p>
+                <span class="proj-date">Dec 2022 – Aug 2023</span>
+            </div>
+            <p class="proj-org">General Directorate of National Social Security Fund</p>
+            <div class="kpi-badge">190 KPIs · 60% reduction in DB maintenance</div>
+            <p class="proj-desc">Designed automated ETL pipelines to track contribution evolution and financial balance across all CNAS agencies. Implemented data quality controls, OLAP backups, and monitoring via Zabbix — reducing database maintenance overhead by 60%.</p>
+            <div class="proj-tags">
+                <span class="tag tag-teal">Oracle ETL</span>
+                <span class="tag tag-purple">SSIS</span>
+                <span class="tag tag-blue">Zabbix</span>
+                <span class="tag tag-amber">DORADO HUAWEI</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('.navbar-right a');
+        navLinks.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
 
 </body>
 </html>
