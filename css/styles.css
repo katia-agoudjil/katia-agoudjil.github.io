@@ -365,3 +365,42 @@ html, body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ── Skills Page ── */
+.skills-container {
+    max-width: 1100px;
+    margin: 120px auto 60px;
+    padding: 0 24px;
+}
+
+.skills-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #888;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.charts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.ncharts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 60px;
+}
+
+.chart-container,
+.nchart-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: none;
+}
