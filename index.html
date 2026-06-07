@@ -23,8 +23,8 @@
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
-            margin: 2rem auto 0;
-            max-width: 680px;
+            margin: 2.5rem auto 0;
+            max-width: 760px;
             justify-content: center;
             padding: 0 20px;
         }
@@ -32,55 +32,55 @@
             background: rgba(65, 105, 225, 0.1);
             border: 1px solid rgba(65, 105, 225, 0.25);
             border-radius: 10px;
-            padding: 14px 22px;
+            padding: 18px 26px;
             text-align: center;
-            min-width: 120px;
+            min-width: 140px;
             flex: 1;
         }
         .stat-number {
-            font-size: 1.6rem;
+            font-size: 2rem;
             font-weight: 700;
             color: #4169E1;
             display: block;
             font-family: 'Montserrat', sans-serif;
         }
         .stat-label {
-            font-size: 0.9rem;
-            color: #FFFFFF ;
-            margin-top: 4px;
+            font-size: 0.85rem;
+            color: #ffffff;
+            margin-top: 6px;
             display: block;
             font-family: 'Roboto Mono', monospace;
         }
 
         /* ── Certifications section ── */
         .certs-section {
-            margin: 2.5rem auto 0;
-            max-width: 760px;
+            margin: 3rem auto 0;
+            max-width: 860px;
             padding: 0 20px;
         }
         .certs-section h2 {
-            font-size: 0.65rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.14em;
-            color: #888;
-            margin-bottom: 1rem;
+            color: #aaa;
+            margin-bottom: 1.25rem;
             text-align: center;
             font-family: 'Lato', sans-serif;
             font-weight: 700;
         }
         .certs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+            gap: 12px;
         }
         .cert-card {
             background: #2a2a2a;
             border: 1px solid #383838;
             border-radius: 10px;
-            padding: 14px;
+            padding: 16px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
             text-decoration: none;
             color: inherit;
             transition: border-color 0.2s, background 0.2s;
@@ -90,11 +90,11 @@
             background: #2e2e3a;
         }
         .cert-issuer-badge {
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.07em;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
             display: inline-block;
             width: fit-content;
@@ -107,15 +107,15 @@
         .badge-alteryx   { background: rgba(0, 176, 116, 0.2);  color: #4de0b0; }
 
         .cert-name {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 700;
-            line-height: 1.45;
+            line-height: 1.5;
             color: #e8e8e8;
             font-family: 'Lato', sans-serif;
         }
         .cert-date {
-            font-size: 11px;
-            color: #FFFFFF ;
+            font-size: 12px;
+            color: #ffffff;
             margin-top: auto;
             font-family: 'Roboto Mono', monospace;
         }
@@ -123,11 +123,11 @@
         /* ── Credly link ── */
         .credly-cta {
             text-align: center;
-            margin-top: 1.25rem;
+            margin-top: 1.5rem;
         }
         .credly-cta a {
-            font-size: 12px;
-            color: #666;
+            font-size: 13px;
+            color: #888;
             text-decoration: none;
             border-bottom: 1px solid #444;
             padding-bottom: 1px;
@@ -148,9 +148,9 @@
         /* ── Responsive ── */
         @media (max-width: 480px) {
             .stats-row { gap: 8px; }
-            .stat-card { padding: 12px 14px; min-width: 100px; }
-            .stat-number { font-size: 1.3rem; }
-            .certs-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+            .stat-card { padding: 14px 16px; min-width: 120px; }
+            .stat-number { font-size: 1.6rem; }
+            .certs-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
         }
     </style>
 </head>
@@ -169,16 +169,16 @@
         </div>
     </nav>
 
-    <!-- Typed headline — untouched -->
+    <!-- Typed headline -->
     <div class="wrapper">
         <h1 class="effect-wrapper">Data is <span id="typed"></span><span class="cursor">&nbsp;</span></h1>
     </div>
 
-    <!-- Updated intro — no photo -->
+    <!-- Intro -->
     <div class="introduction-container">
         <div class="introduction">
-            <p>I'm <span class="extra-bold">Katia</span>, a BI &amp; Data Engineering Specialist with <span class="extra-bold">3+ years</span> of experience, currently at <span class="extra-bold">Sanofi</span>, delivering commercial analytics across Africa, Europe &amp; Latin America.What do I like? Diving deep into the world of technology and data. The more I explore, the more I realize we're just tiny creatures in a big, fascinating world.<br><br>
-     <span class="extra-bold">There's Always Something In The Data. It Just Needs The Right Eyes. </span></p>
+            <p>I'm <span class="extra-bold">Katia</span>, a BI &amp; Data Engineering Specialist with <span class="extra-bold">3+ years</span> of experience, currently at <span class="extra-bold">Sanofi</span>, delivering commercial analytics across Africa, Europe &amp; Latin America. What do I like? Diving deep into the world of technology and data. The more I explore, the more I realize we're just tiny creatures in a big, fascinating world.<br><br>
+            <span class="extra-bold">There's always something in the data. It just needs the right eyes.</span></p>
         </div>
     </div>
 
@@ -200,7 +200,6 @@
             <span class="stat-number">+1700</span>
             <span class="stat-label">KPIs Tracked</span>
         </div>
-        
     </div>
 
     <!-- Certifications -->
@@ -268,7 +267,7 @@
         </div>
     </div>
 
-    <!-- Social links — untouched -->
+    <!-- Social links -->
     <div class="social-links">
         <a href="https://www.linkedin.com/in/agoudjilkatia/" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon.svg" alt="LinkedIn" title="LinkedIn" class="social-icon"></a>
         <a href="https://github.com/katia-agoudjil" target="_blank"><img src="https://raw.githubusercontent.com/agkatia/agkatia.github.io/refs/heads/main/images/git.png" alt="GitHub" title="GitHub" class="social-icon"></a>
