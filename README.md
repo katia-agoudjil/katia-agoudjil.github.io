@@ -1,4 +1,4 @@
-# Katia AGOUDJIL – Portfolio Website
+# Katia AGOUDJIL : The Portfolio
 
 ## About the Project
 This project highlights my work, skills, and experience as a **BI & Data Engineering Specialist**.
